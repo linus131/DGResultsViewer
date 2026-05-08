@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DG Viewer WASM</title>
+    
+<script type="module">
+import init, * as bindings from '/DGResultsViewer/DGresultsviewer2-a164600a1ff314fa.js';
+const wasm = await init({ module_or_path: '/DGResultsViewer/DGresultsviewer2-a164600a1ff314fa_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+    <style>
+        html, body, canvas {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            overflow: hidden; background-color: #1b1b1b;
+        }
+    </style>
+<link rel="modulepreload" href="/DGResultsViewer/DGresultsviewer2-a164600a1ff314fa.js" crossorigin="anonymous" integrity="sha384-VBt7N2rqOZ9bNjBeMHQ1Uz+8jyZkb8FBrd5MeaE69AjyhH4FQjX1VTH0Ww8hhY2t"><link rel="preload" href="/DGResultsViewer/DGresultsviewer2-a164600a1ff314fa_bg.wasm" crossorigin="anonymous" integrity="sha384-md7k1+0RsuCGZpDNGthpF+9KlXTzlY6297rI9enjx0nYWcCgf3jVjWegAsW9iQ7B" as="fetch" type="application/wasm"></head>
+<body>
+    <canvas id="the_canvas_id"></canvas>
+</body>
+</html>
