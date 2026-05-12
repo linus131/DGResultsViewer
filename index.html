@@ -5,8 +5,8 @@
     <title>DG Viewer WASM</title>
     
 <script type="module">
-import init, * as bindings from '/DGResultsViewer/DGresultsviewer2-b5f5ad95ca6c8b6d.js';
-const wasm = await init({ module_or_path: '/DGResultsViewer/DGresultsviewer2-b5f5ad95ca6c8b6d_bg.wasm' });
+import init, * as bindings from '/DGResultsViewer/DGresultsviewer2-75a23b8a2ef9cebc.js';
+const wasm = await init({ module_or_path: '/DGResultsViewer/DGresultsviewer2-75a23b8a2ef9cebc_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -21,7 +21,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
             overflow: hidden; background-color: #1b1b1b;
         }
     </style>
-<link rel="modulepreload" href="/DGResultsViewer/DGresultsviewer2-b5f5ad95ca6c8b6d.js" crossorigin="anonymous" integrity="sha384-q+/DmpBuxGUGepVWrrsSknAQZf1nBbxYIQx3S31p7gApur/6NAe6r4OVVa0tOhcU"><link rel="preload" href="/DGResultsViewer/DGresultsviewer2-b5f5ad95ca6c8b6d_bg.wasm" crossorigin="anonymous" integrity="sha384-QXfbCpo/TloJR+S+5AUoKa3dY6zlGCmmlVDszcmGn1riMQdtgQMGJoTauPqSEaQz" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/DGResultsViewer/DGresultsviewer2-75a23b8a2ef9cebc.js" crossorigin="anonymous" integrity="sha384-+tbZu4ZJ4EJ9p9OHfT+iFsB8HnqnTc77V23tck3lZ3IiiXaKSTCpc0nH/RpjUZW0"><link rel="preload" href="/DGResultsViewer/DGresultsviewer2-75a23b8a2ef9cebc_bg.wasm" crossorigin="anonymous" integrity="sha384-nGcPum00Llm0DSEYzH7V5g0QkcAkymdGm+QikHtQT4+zl81iCESdzEoMhGswmXcf" as="fetch" type="application/wasm"></head>
 <body>
     <canvas id="the_canvas_id"></canvas>
 </body>
